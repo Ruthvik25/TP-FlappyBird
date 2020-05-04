@@ -1,0 +1,23 @@
+h3 {
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px 16px;
+    background-color: orange;
+    color: purple;
+    text-decoration: none;
+    border: 2px solid orangered;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    text-decoration: none;
+    background-color: orangered;
+    color: purple;
+    text-decoration: none;
+    border: 2px solid orange;
+}
