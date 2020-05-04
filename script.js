@@ -13,7 +13,6 @@ gavat.src = "image/gavat.png";
 ultapipe.src = "image/ultapipe.png";
 saralpipe.src = "image/pipe.png";
 
-
 var gap = 85;
 var constant;
 
@@ -23,8 +22,6 @@ var bY = 150;
 var gravity = 1.5;
 
 var score = 0;
-
-
 var fly = new Audio();
 var scor = new Audio();
 
@@ -53,8 +50,8 @@ function draw(){
     for(var i = 0; i < pipe.length; i++){
         
         constant = ultapipe.height+gap;
-        ctx.drawImage(ultapipe,pipe[i].x,pipe[i].y);
-        ctx.drawImage(saralpipe,pipe[i].x,pipe[i].y+constant);
+        ctx.drawImage(ultapipe, pipe[i].x, pipe[i].y);
+        ctx.drawImage(saralpipe, pipe[i].x, pipe[i].y+constant);
              
         pipe[i].x--;
         
@@ -66,7 +63,8 @@ function draw(){
         }
         
         if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + ultapipe.width && (bY <= pipe[i].y + ultapipe.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - gavat.height){
-            location.reload();
+            alert("Game Over \nScore : " + score);
+            window.close();
         }
         
         if(pipe[i].x == 5){

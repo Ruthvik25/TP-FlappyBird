@@ -2,6 +2,10 @@ h3 {
     text-transform: uppercase;
 }
 
+body {
+    text-align: center;
+}
+
 button {
     padding: 10px 16px;
     background-color: orange;
@@ -21,3 +25,9 @@ button:active {
     text-decoration: none;
     border: 2px solid orange;
 }
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
